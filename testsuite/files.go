@@ -39,20 +39,19 @@ var testpath string
 var benchpath string
 
 func init() {
-	gopath := os.Getenv("GOPATH")
-	if gopath == "" {
-		gopath = "../../../../../../"
-	}
-	testpath = filepath.Join(gopath, "src/github.com/katydid/validator-testsuite/validator/tests")
-	benchpath = filepath.Join(gopath, "src/github.com/katydid/validator-testsuite/validator/benches")
+	gopath := "../../../../../../"
+	testpath = filepath.Join(gopath, "src/github.com/katydid/paper-2026-verified-derivatives-testsuite/validator/tests")
+	benchpath = filepath.Join(gopath, "src/github.com/katydid/paper-2026-verified-derivatives-testsuite/validator/benches")
 }
+
+const pleaseCloneStr = "Please clone https://github.com/katydid/paper-2026-verified-derivatives-testsuite into ../../katydid/paper-2026-verified-derivatives-testsuite"
 
 func TestSuiteExists() (bool, error) {
 	if exists(testpath) {
 		return true, nil
 	}
 	if os.Getenv("TESTSUITE") == "MUST" {
-		return false, fmt.Errorf("testsuite does not exist at %v", testpath)
+		return false, fmt.Errorf("testsuite does not exist at %s. %s", testpath, pleaseCloneStr)
 	}
 	return false, nil
 }
@@ -62,9 +61,9 @@ func BenchSuiteExists() (bool, error) {
 		return true, nil
 	}
 	if os.Getenv("TESTSUITE") == "MUST" {
-		return false, fmt.Errorf("testsuite does not exist at %v", testpath)
+		return false, fmt.Errorf("testsuite does not exist at %v. %s", testpath, pleaseCloneStr)
 	}
-	return false, fmt.Errorf("benchsuite does not exist at %v", testpath)
+	return false, fmt.Errorf("benchsuite does not exist at %v. %s", testpath, pleaseCloneStr)
 }
 
 func getFolders(path string) (map[string][]string, error) {
