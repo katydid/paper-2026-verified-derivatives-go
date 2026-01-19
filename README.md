@@ -1,6 +1,6 @@
 ## Katydid Validator for Protocol Buffers in Go
 
-[![GoDoc](https://godoc.org/github.com/katydid/validator-go-proto?status.svg)](https://godoc.org/github.com/katydid/validator-go-proto) [![Build Status](https://github.com/katydid/validator-go-proto/actions/workflows/build.yml/badge.svg)](https://github.com/katydid/validator-go-proto/actions)
+[![GoDoc](https://godoc.org/github.com/katydid/paper-2026-verified-derivatives?status.svg)](https://godoc.org/github.com/katydid/paper-2026-verified-derivatives) [![Build Status](https://github.com/katydid/paper-2026-verified-derivatives/actions/workflows/build.yml/badge.svg)](https://github.com/katydid/paper-2026-verified-derivatives/actions)
 
 ![Katydid Logo](https://cdn.rawgit.com/katydid/katydid.github.io/main/logo.png)
 

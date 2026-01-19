@@ -1,4 +1,4 @@
-module github.com/katydid/validator-go-proto
+module github.com/katydid/paper-2026-verified-derivatives
 
 go 1.24
 
