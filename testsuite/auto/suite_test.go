@@ -18,7 +18,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/katydid/paper-2026-verified-derivatives/testsuite"
+	"github.com/katydid/paper-2026-verified-filter/testsuite"
 	"github.com/katydid/parser-go/parser"
 	"github.com/katydid/validator-go/validator/ast"
 	"github.com/katydid/validator-go/validator/auto"

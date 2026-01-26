@@ -40,11 +40,11 @@ var benchpath string
 
 func init() {
 	gopath := "../../../../../../"
-	testpath = filepath.Join(gopath, "src/github.com/katydid/paper-2026-verified-derivatives-testsuite/validator/tests")
-	benchpath = filepath.Join(gopath, "src/github.com/katydid/paper-2026-verified-derivatives-testsuite/validator/benches")
+	testpath = filepath.Join(gopath, "src/github.com/katydid/paper-2026-verified-filter-testsuite/validator/tests")
+	benchpath = filepath.Join(gopath, "src/github.com/katydid/paper-2026-verified-filter-testsuite/validator/benches")
 }
 
-const pleaseCloneStr = "Please clone https://github.com/katydid/paper-2026-verified-derivatives-testsuite into ../../katydid/paper-2026-verified-derivatives-testsuite"
+const pleaseCloneStr = "Please clone https://github.com/katydid/paper-2026-verified-filter-testsuite into ../../katydid/paper-2026-verified-filter-testsuite"
 
 func TestSuiteExists() (bool, error) {
 	if exists(testpath) {

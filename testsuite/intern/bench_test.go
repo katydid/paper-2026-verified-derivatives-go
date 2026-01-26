@@ -17,7 +17,7 @@ package intern_test
 import (
 	"testing"
 
-	"github.com/katydid/paper-2026-verified-derivatives/testsuite"
+	"github.com/katydid/paper-2026-verified-filter/testsuite"
 	"github.com/katydid/validator-go/validator/intern"
 )
 

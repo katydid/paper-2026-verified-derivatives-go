@@ -9,41 +9,41 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        path: gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        path: gopath/src/github.com/katydid/paper-2026-verified-filter-go
     - name: Checkout testsuite
       uses: actions/checkout@v4
       with:
-        repository: katydid/paper-2026-verified-derivatives-testsuite
-        path: gopath/src/github.com/katydid/paper-2026-verified-derivatives-testsuite
+        repository: katydid/paper-2026-verified-filter-testsuite
+        path: gopath/src/github.com/katydid/paper-2026-verified-filter-testsuite
     - name: Setup Go
       uses: actions/setup-go@v3
       with:
         go-version: 1.24
     - name: Fetch dependencies
       run: |
-        cd gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        cd gopath/src/github.com/katydid/paper-2026-verified-filter-go
         go mod download -x
     - name: Install tools
       run: |
-        cd gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        cd gopath/src/github.com/katydid/paper-2026-verified-filter-go
     - name: env
       run: env && go env && pwd
     - name: tree
       run: tree
     - name: Build
       run: |
-        cd gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        cd gopath/src/github.com/katydid/paper-2026-verified-filter-go
         make build
     - name: Test
       run: |
-        cd gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        cd gopath/src/github.com/katydid/paper-2026-verified-filter-go
         make test
     - name: Checklicencse
       uses: awalterschulze/checklicense@v1.0.6
       with:
-        path: gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        path: gopath/src/github.com/katydid/paper-2026-verified-filter-go
         ignores: doc.go .svg .txt
     - name: Diff
       run: |
-        cd gopath/src/github.com/katydid/paper-2026-verified-derivatives-go
+        cd gopath/src/github.com/katydid/paper-2026-verified-filter-go
         make diff

@@ -1,4 +1,4 @@
-module github.com/katydid/paper-2026-verified-derivatives
+module github.com/katydid/paper-2026-verified-filter
 
 go 1.24
 
