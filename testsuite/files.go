@@ -46,6 +46,7 @@ func init() {
 
 const pleaseCloneStr = "Please clone https://github.com/katydid/paper-2026-verified-filter-testsuite into ../../katydid/paper-2026-verified-filter-testsuite"
 
+// TestSuiteExists checks where the test suite is located in the expected location.
 func TestSuiteExists() (bool, error) {
 	if exists(testpath) {
 		return true, nil
@@ -56,6 +57,7 @@ func TestSuiteExists() (bool, error) {
 	return false, nil
 }
 
+// BenchSuiteExists checks where the test suite benchmarks are located in the expected location.
 func BenchSuiteExists() (bool, error) {
 	if exists(testpath) {
 		return true, nil
@@ -93,6 +95,7 @@ func getFolders(path string) (map[string][]string, error) {
 	return folders, nil
 }
 
+// ReadTestSuite reads all the test cases.
 func ReadTestSuite() ([]Test, error) {
 	tests := []Test{}
 	codecs, err := getFolders(testpath)
@@ -117,6 +120,7 @@ func ReadTestSuite() ([]Test, error) {
 	return tests, nil
 }
 
+// ReadBenchmarkSuite reads all the benchmarks.
 func ReadBenchmarkSuite() ([]Bench, error) {
 	benches := []Bench{}
 	codecs, err := getFolders(benchpath)

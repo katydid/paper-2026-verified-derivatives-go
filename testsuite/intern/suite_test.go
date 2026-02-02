@@ -23,6 +23,7 @@ import (
 	"github.com/katydid/validator-go/validator/intern"
 )
 
+// TestSuite does no memoization, just interning of some patterns to avoid creating duplicates.
 func TestSuite(t *testing.T) {
 	exists, err := testsuite.TestSuiteExists()
 	if !exists {

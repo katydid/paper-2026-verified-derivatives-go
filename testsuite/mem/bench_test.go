@@ -23,6 +23,9 @@ import (
 	"github.com/katydid/validator-go/validator/mem"
 )
 
+// BenchmarkSuite memoizes states as it is run, result in more and more efficient runs.
+// Use the -benchtime parameter to set the number of runs.
+// For example, use -benchtime=100x to set b.N to 100.
 func BenchmarkSuite(b *testing.B) {
 	var bN = flag.Int("b.N", 0, "the number of times the benchmark function's target code must run")
 	flag.Parse()

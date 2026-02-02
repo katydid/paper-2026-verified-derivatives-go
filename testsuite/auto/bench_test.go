@@ -22,6 +22,7 @@ import (
 	"github.com/katydid/validator-go/validator/auto"
 )
 
+// BenchmarkSuite precomputes all states before running the benchmark.
 func BenchmarkSuite(b *testing.B) {
 	exists, err := testsuite.BenchSuiteExists()
 	if !exists {

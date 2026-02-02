@@ -24,6 +24,7 @@ import (
 	"github.com/katydid/validator-go/validator/mem"
 )
 
+// TestSuite memoizes states as it is run.
 func TestSuite(t *testing.T) {
 	exists, err := testsuite.TestSuiteExists()
 	if !exists {

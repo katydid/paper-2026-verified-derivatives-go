@@ -21,6 +21,7 @@ import (
 	"github.com/katydid/validator-go/validator/intern"
 )
 
+// BenchmarkSuite does no memoization, just interning of some patterns to avoid creating duplicates.
 func BenchmarkSuite(b *testing.B) {
 	exists, err := testsuite.BenchSuiteExists()
 	if !exists {

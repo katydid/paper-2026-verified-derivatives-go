@@ -7,7 +7,7 @@ The Go implementation of [Verified Derivatives for Fast Filtering and Schema Val
 How to run and reproduce the benchmarks:
 
 1. Clone this repo into a folder that ends with `./src/github.com/katydid/paper-2026-verified-filter-go`
-2. Clone https://github.com/katydid/paper-2026-verified-filter-testsuite into `./src/github.com/katydid/paper-2026-verified-filter-testsuite` relative to this repo
+2. Clone https://github.com/katydid/paper-2026-verified-filter-testsuite into `./src/github.com/katydid/paper-2026-verified-filter-testsuite`, where `.` is the same `.` in `./src/github.com/katydid/paper-2026-verified-filter-go`, so relative to this folder it would be `../../../../src/github.com/katydid/paper-2026-verified-filter-testsuite`.
 3. Install [Go](https://golang.org) version 1.24
 4. Install protoc version 29.3 by [downloading](https://github.com/protocolbuffers/protobuf/releases/download/v29.3/protoc-29.3-linux-x86_64.zip) it from [Protobuf releases](https://github.com/protocolbuffers/protobuf/releases) and placing the `protoc` binary in your `PATH`.
 5. Generate benchmarks by going to `./src/github.com/katydid/paper-2026-verified-filter-testsuite` and running `make regenerate-paper-benchmarks`. This can take a few minutes.

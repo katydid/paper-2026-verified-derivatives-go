@@ -25,6 +25,7 @@ import (
 	"github.com/katydid/validator-go/validator/intern"
 )
 
+// TestSuite precomputes all states before running the tests.
 func TestSuite(t *testing.T) {
 	exists, err := testsuite.TestSuiteExists()
 	if !exists {
